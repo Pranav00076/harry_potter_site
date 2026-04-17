@@ -1,7 +1,6 @@
 import React from "react";
 import './Flims.css'
 import MovieCard from './MovieCard'
-import Navbar from "../reusable_comps/Navbar/Navbar";
 
 
 const films = [
@@ -75,12 +74,12 @@ function Flims() {
   return (
     
     <div className="app">
-      <section className="hero">
-        <div className="hero-bg"></div>
-        <div className="hero-content">
-          <p className="hero-eyebrow">The Complete Collection</p>
-          <h1 className="hero-title">Films</h1>
-          <p className="hero-subtitle">
+      <section className="film-hero">
+        <div className="film-hero-bg"></div>
+        <div className="film-hero-content">
+          <p className="film-hero-eyebrow">The Complete Collection</p>
+          <h1 className="film-hero-title">Films</h1>
+          <p className="film-hero-subtitle">
             Follow Harry Potter's extraordinary journey from the cupboard under the stairs
             to the final battle at Hogwarts. Eight films. One legendary story.
           </p>
