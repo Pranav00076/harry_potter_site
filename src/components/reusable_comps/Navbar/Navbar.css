@@ -1,78 +1,186 @@
-.navbar {
-  background: #0b0f2f;
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500&display=swap");
+
+.nav-container {
+  background: #020524;
   color: white;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  z-index: 100;
 }
 
-/* Top section */
-.navbar-top {
+/* ================= TOP BAR ================= */
+.nav-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
+  justify-content: space-between;
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.socials i {
-  margin-right: 12px;
-  cursor: pointer;
+/* SOCIALS */
+.nav-socials {
+  display: flex;
+  gap: 16px;
+  font-size: 18px;
   opacity: 0.8;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+/* LOGO */
+.nav-logo {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  color: #d4af37;
   letter-spacing: 2px;
 }
 
-.actions {
+/* ACTIONS */
+.nav-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
-.search {
-  padding: 6px 10px;
-  border-radius: 20px;
+/* SEARCH */
+.nav-search {
+  position: relative;
+}
+
+.nav-search input {
+  background: rgba(255, 255, 255, 0.08);
   border: none;
-  outline: none;
+  padding: 10px 36px 10px 14px;
+  border-radius: 20px;
+  color: white;
+  width: 180px;
 }
 
-.login {
-  background: transparent;
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* BUTTONS */
+.login-btn {
   border: 1px solid white;
-  color: white;
-  padding: 6px 12px;
+  background: transparent;
+  padding: 8px 18px;
   border-radius: 20px;
-  cursor: pointer;
+  color: white;
 }
 
-.signup {
-  background: #5a5cff;
+.signup-btn {
+  background: linear-gradient(135deg, #5f6dfc, #6c63ff);
   border: none;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 20px;
   color: white;
-  cursor: pointer;
 }
 
-/* Bottom nav */
-.navbar-links {
+/* ================= MENU ================= */
+.nav-menu {
   display: flex;
-  justify-content: center;
   gap: 24px;
-  padding: 10px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 14px 40px;
   font-size: 14px;
 }
 
-.navbar-links a {
-  text-decoration: none;
-  color: white;
-  opacity: 0.9;
+.nav-item {
+  cursor: pointer;
+  opacity: 0.85;
+  padding: 6px 10px;
+  border-radius: 4px;
   transition: 0.2s;
 }
 
-.navbar-links a:hover {
+.nav-item:hover {
   opacity: 1;
-  border-bottom: 2px solid #5a5cff;
+}
+
+/* ACTIVE */
+.nav-item.active {
+  border: 1px solid rgba(255,255,255,0.5);
+  opacity: 1;
+}
+
+.arrow {
+  margin-left: 4px;
+}
+
+/* ================= MEGA MENU ================= */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #020524;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: all 0.25s ease;
+}
+
+.mega-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* CONTENT */
+.mega-content {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  padding: 30px 40px 40px;
+}
+
+/* CARD */
+.mega-card {
+  width: 160px;
+  height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mega-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mega-card:hover {
+  transform: translateY(-6px);
+}
+
+/* OVERLAY */
+.mega-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+
+.mega-overlay span {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* TOP BORDER LINE */
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
 }
