@@ -88,9 +88,9 @@ function Flims() {
       </section>
 
       <section className="films-section">
-        <div className="section-header">
-          <p className="section-label">All Films</p>
-          <h2 className="section-title">The Eight-Film Journey</h2>
+        <div className="films-section-header">
+          <p className="films-section-label">All Films</p>
+          <h2 className="films-section-title">The Eight-Film Journey</h2>
         </div>
 
         <div className="films-grid">
@@ -100,9 +100,9 @@ function Flims() {
         </div>
       </section>
 
-      <footer className="footer">
-        <p className="footer-logo">Harry Potter</p>
-        <p className="footer-copy">
+      <footer className="films-footer">
+        <p className="films-footer-logo">Harry Potter</p>
+        <p className="films-footer-copy">
           © Wizarding World. Fan tribute page — all rights belong to their respective owners.
         </p>
       </footer>
