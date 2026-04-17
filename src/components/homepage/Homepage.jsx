@@ -33,18 +33,10 @@ const Homepage = () => {
             <nav className={`navbar ${isScrolled ? 'glass' : ''}`}>
                 <div className="nav-top">
                     <div className="social-links">
-                        <i className="fab fa-youtube">
-                            <img width="50" height="50" src="https://img.icons8.com/pixels/32/FFFFFF/youtube.png" alt="youtube" />
-                        </i>
-                        <i className="fab fa-tiktok">
-                            <img width="50" height="50" src="https://img.icons8.com/ios/50/FFFFFF/tiktok--v1.png" alt="tiktok--v1" />
-                        </i>
-                        <i className="fab fa-facebook">
-                            <img width="50" height="50" src="https://img.icons8.com/wired/64/FFFFFF/facebook-new.png" alt="facebook-new" />
-                        </i>
-                        <i className="fab fa-instagram">
-                            <img width="50" height="50" src="https://img.icons8.com/laces/50/FFFFFF/instagram-new.png" alt="instagram-new" />
-                        </i>
+                        <i className="fab fa-youtube"></i>
+                        <i className="fab fa-tiktok"></i>
+                        <i className="fab fa-facebook"></i>
+                        <i className="fab fa-instagram"></i>
                     </div>
                     <div className="logo">
                         <img height="100" width="250" src={logo} alt="Harry Potter" />
