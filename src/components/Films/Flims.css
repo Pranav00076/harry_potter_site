@@ -1,10 +1,3 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: #0a0a0f;
   color: #e8e0d0;
@@ -12,63 +5,7 @@ body {
   min-height: 100vh;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(5, 5, 10, 0.92);
-  border-bottom: 1px solid rgba(200, 160, 80, 0.25);
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  backdrop-filter: blur(6px);
-}
-
-.navbar-logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #c8a050;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.navbar-logo span {
-  color: #e8e0d0;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.navbar-links a {
-  color: #c8b88a;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-family: Arial, sans-serif;
-  transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-  color: #c8a050;
-}
-
-/* active link styling */
-.navbar-links a.active {
-  color: #c8a050;
-  border-bottom: 2px solid #c8a050;
-  padding-bottom: 2px;
-}
-
-
-.hero {
+.film-hero {
   position: relative;
   width: 100%;
   height: 520px;
@@ -79,7 +16,7 @@ body {
   margin-top: 64px; 
 }
 
-.hero-bg {
+.film-hero-bg {
   position: absolute;
   inset: 0;
   background:
@@ -89,20 +26,20 @@ body {
     center / cover no-repeat;
 }
 
-.hero-bg::after {
+.film-hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
   background: rgba(10, 5, 20, 0.4);
 }
 
-.hero-content {
+.film-hero-content {
   position: relative;
   z-index: 2;
   padding-left: 5rem;
 }
 
-.hero-eyebrow {
+.film-hero-eyebrow {
   font-size: 0.8rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -111,7 +48,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.hero-title {
+.film-hero-title {
   font-size: 4.5rem;
   color: #f0e8d0;
   line-height: 1;
@@ -120,7 +57,7 @@ body {
   font-weight: bold;
 }
 
-.hero-subtitle {
+.film-hero-subtitle {
   margin-top: 1rem;
   font-size: 1rem;
   color: #b8a880;
@@ -131,7 +68,7 @@ body {
   line-height: 1.6;
 }
 
-.hero-divider {
+.film-hero-divider {
   width: 60px;
   height: 2px;
   background: #c8a050;
