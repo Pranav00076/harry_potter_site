@@ -1,0 +1,78 @@
+.navbar {
+  background: #0b0f2f;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Top section */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+.socials i {
+  margin-right: 12px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.signup {
+  background: #5a5cff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Bottom nav */
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+  transition: 0.2s;
+}
+
+.navbar-links a:hover {
+  opacity: 1;
+  border-bottom: 2px solid #5a5cff;
+}
