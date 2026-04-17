@@ -1,186 +1,147 @@
-/* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-.nav-container {
-  background: #020524;
-  color: white;
-  font-family: "Inter", sans-serif;
-  position: relative;
-  z-index: 100;
+:root {
+  /* Colors */
+  --bg-primary: #060b13;
+  --bg-secondary: #0a0e16;
+  --bg-elevated: #141a26;
+  --accent-gold: #d4af37;
+  --accent-blue: #3e52e8;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* House Colors */
+  --gryffindor-red: #740001;
+  --gryffindor-gold: #d3a625;
+  --slytherin-green: #1a472a;
+  --slytherin-silver: #aaaaaa;
+  --hufflepuff-yellow: #ecb939;
+  --hufflepuff-black: #000000;
+  --ravenclaw-blue: #0e1a40;
+  --ravenclaw-bronze: #946b2d;
+
+  /* Fonts */
+  --font-heading: 'Cinzel Decorative', serif;
+  --font-subheading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --nav-height: 120px;
+  --section-padding: 80px 5%;
 }
 
-/* ================= TOP BAR ================= */
-.nav-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* SOCIALS */
-.nav-socials {
-  display: flex;
-  gap: 16px;
-  font-size: 18px;
-  opacity: 0.8;
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* LOGO */
-.nav-logo {
-  font-family: "Cinzel", serif;
-  font-size: 28px;
-  color: #d4af37;
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* ACTIONS */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(10, 14, 22, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
 }
 
-/* SEARCH */
-.nav-search {
-  position: relative;
-}
-
-.nav-search input {
-  background: rgba(255, 255, 255, 0.08);
+/* Button Styles */
+.btn-primary {
+  background: var(--accent-blue);
+  color: white;
+  padding: 14px 36px;
   border: none;
-  padding: 10px 36px 10px 14px;
-  border-radius: 20px;
-  color: white;
-  width: 180px;
-}
-
-.search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* BUTTONS */
-.login-btn {
-  border: 1px solid white;
-  background: transparent;
-  padding: 8px 18px;
-  border-radius: 20px;
-  color: white;
-}
-
-.signup-btn {
-  background: linear-gradient(135deg, #5f6dfc, #6c63ff);
-  border: none;
-  padding: 8px 18px;
-  border-radius: 20px;
-  color: white;
-}
-
-/* ================= MENU ================= */
-.nav-menu {
-  display: flex;
-  gap: 24px;
-  padding: 14px 40px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 700;
   font-size: 14px;
-}
-
-.nav-item {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   cursor: pointer;
-  opacity: 0.85;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(62, 82, 232, 0.3);
 }
 
-.nav-item:hover {
-  opacity: 1;
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(62, 82, 232, 0.5);
+  filter: brightness(1.1);
 }
 
-/* ACTIVE */
-.nav-item.active {
-  border: 1px solid rgba(255,255,255,0.5);
-  opacity: 1;
+.btn-outline {
+  background: transparent;
+  color: white;
+  padding: 12px 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.arrow {
-  margin-left: 4px;
+.btn-outline:hover {
+  background: white;
+  color: var(--bg-primary);
 }
 
-/* ================= MEGA MENU ================= */
-.mega-menu {
-  position: absolute;
-  top: 100%;
+/* Navbar Structure */
+.navbar {
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  background: #020524;
-
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-
-  transition: all 0.25s ease;
-}
-
-.mega-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* CONTENT */
-.mega-content {
+  z-index: 1000;
   display: flex;
-  gap: 24px;
-  justify-content: center;
-  padding: 30px 40px 40px;
+  flex-direction: column;
 }
 
-/* CARD */
-.mega-card {
-  width: 160px;
-  height: 180px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.mega-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mega-card:hover {
-  transform: translateY(-6px);
-}
-
-/* OVERLAY */
-.mega-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+.nav-top {
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-bottom {
+  display: flex;
   justify-content: center;
-  padding-bottom: 12px;
+  gap: 30px;
+  padding: 12px 5%;
 }
 
-.mega-overlay span {
-  font-size: 13px;
-  letter-spacing: 1px;
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* TOP BORDER LINE */
-.mega-menu::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 1px;
-  background: rgba(255,255,255,0.1);
+.nav-link:hover {
+  color: var(--accent-gold);
 }
