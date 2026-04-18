@@ -1,0 +1,191 @@
+/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ─── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  --hp-navy:    #0a0a1a;
+  --hp-navy-2:  #0d0d2b;
+  --hp-navy-3:  #12123a;
+  --hp-gold:    #c9a84c;
+  --hp-gold-lt: #e8c97a;
+  --hp-gold-dk: #8a6a20;
+  --hp-white:   #f0eadc;
+  --hp-grey:    #9a95a8;
+  --hp-card-bg: rgba(13, 13, 43, 0.85);
+
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Playfair Display', serif;
+  --font-text:    'EB Garamond', serif;
+
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ─── Global Reset (scoped) ────────────────────────────────────────────────── */
+.books-page *,
+.books-page *::before,
+.books-page *::after {
+  box-sizing: border-box;
+}
+
+/* ─── Page Wrapper ─────────────────────────────────────────────────────────── */
+.books-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--hp-navy);
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(201,168,76,0.10) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  color: var(--hp-white);
+}
+
+/* ─── Starfield Canvas ─────────────────────────────────────────────────────── */
+.books-starfield {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Hero ─────────────────────────────────────────────────────────────────── */
+.books-hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 24px 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.books-hero__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.books-hero__eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--hp-gold);
+  margin: 0 0 20px;
+  opacity: 0.85;
+}
+
+.books-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(160deg, #f5e6b8 10%, var(--hp-gold) 45%, #a07820 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 0 40px rgba(201,168,76,0.35));
+}
+
+/* divider */
+.books-hero__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 28px auto;
+}
+.books-hero__divider span {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hp-gold), transparent);
+}
+
+.books-hero__subtitle {
+  font-family: var(--font-text);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-style: italic;
+  color: rgba(240,234,220,0.7);
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.books-hero__fog {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--hp-navy));
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ─── Grid Section ─────────────────────────────────────────────────────────── */
+.books-grid-section {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(16px, 5vw, 64px) 80px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .books-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 800px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 8px 60px;
+  }
+}
+
+/* ─── Footer ───────────────────────────────────────────────────────────────── */
+.books-footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 24px 40px;
+}
+
+.books-footer__line {
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+  margin: 0 auto 20px;
+}
+
+.books-footer__text {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.4);
+}

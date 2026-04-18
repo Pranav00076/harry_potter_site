@@ -1,0 +1,190 @@
+/* ─── Card Wrapper ─────────────────────────────────────────────────────────── */
+.book-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(13, 13, 43, 0.72);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              border-color 0.38s ease;
+  backdrop-filter: blur(8px);
+}
+
+.book-card:hover,
+.book-card:focus-within {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 0 32px rgba(201, 168, 76, 0.25),
+    0 24px 48px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(201, 168, 76, 0.35);
+  border-color: rgba(201, 168, 76, 0.45);
+}
+
+/* ─── Ambient Glow ─────────────────────────────────────────────────────────── */
+.book-card__glow {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(40px);
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.book-card:hover .book-card__glow {
+  opacity: 0.25;
+}
+
+/* ─── Cover ────────────────────────────────────────────────────────────────── */
+.book-card__cover-wrap {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  aspect-ratio: 2 / 3;
+}
+
+.book-card__cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.book-card:hover .book-card__cover {
+  transform: scale(1.06);
+}
+
+/* Sheen overlay on cover */
+.book-card__cover-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Body ─────────────────────────────────────────────────────────────────── */
+.book-card__body {
+  position: relative;
+  z-index: 1;
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 26, 0.7) 0%,
+    rgba(10, 10, 26, 0.95) 100%
+  );
+}
+
+.book-card__number {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--card-accent, #c9a84c);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.book-card__title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  font-weight: 700;
+  color: #f0eadc;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.book-card__desc {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  color: rgba(200, 195, 215, 0.8);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ─── Button ───────────────────────────────────────────────────────────────── */
+.book-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 9px 20px;
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  border-radius: 3px;
+  color: #c9a84c;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.28s ease,
+    color 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+  align-self: flex-start;
+}
+
+.book-card__btn:hover,
+.book-card__btn:focus-visible {
+  background: #c9a84c;
+  color: #0a0a1a;
+  border-color: #c9a84c;
+  box-shadow: 0 0 18px rgba(201, 168, 76, 0.4);
+}
+
+.book-card__btn-arrow {
+  transition: transform 0.28s ease;
+}
+
+.book-card__btn:hover .book-card__btn-arrow,
+.book-card__btn:focus-visible .book-card__btn-arrow {
+  transform: translateX(3px);
+}
+
+/* ─── Corner Ornaments ─────────────────────────────────────────────────────── */
+.book-card__corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(201, 168, 76, 0.35);
+  border-style: solid;
+  pointer-events: none;
+  z-index: 2;
+  transition: border-color 0.35s ease, width 0.35s ease, height 0.35s ease;
+}
+
+.book-card:hover .book-card__corner {
+  border-color: rgba(201, 168, 76, 0.65);
+  width: 18px;
+  height: 18px;
+}
+
+.book-card__corner--tl { top: 8px; left: 8px;  border-width: 1px 0 0 1px; }
+.book-card__corner--tr { top: 8px; right: 8px; border-width: 1px 1px 0 0; }
+.book-card__corner--bl { bottom: 8px; left: 8px;  border-width: 0 0 1px 1px; }
+.book-card__corner--br { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }
