@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import BookCard from '../components/BookCard';
+import BookCard from '../BookCard/BookCard';
+import Navbar from '../reusable_comps/Navbar/Navbar';
 import './BooksPage.css';
 
 // ─── Book Data ────────────────────────────────────────────────────────────────
@@ -128,6 +129,9 @@ function StarField() {
 // ─── Page Component ───────────────────────────────────────────────────────────
 export default function BooksPage() {
   return (
+    <>
+      <Navbar />
+
     <main className="books-page">
       <StarField />
 
@@ -170,5 +174,6 @@ export default function BooksPage() {
         </p>
       </footer>
     </main>
+    </>
   );
 }

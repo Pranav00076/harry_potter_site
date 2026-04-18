@@ -38,6 +38,7 @@
   overflow-x: hidden;
   font-family: var(--font-body);
   color: var(--hp-white);
+  margin-top: 210px;
 }
 
 /* ─── Starfield Canvas ─────────────────────────────────────────────────────── */

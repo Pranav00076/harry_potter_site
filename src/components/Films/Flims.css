@@ -80,11 +80,11 @@ body {
   background: #0a0a0f;
 }
 
-.films-section-header {
+.section-header {
   margin-bottom: 2.5rem;
 }
 
-.films-section-label {
+.section-label {
   font-size: 0.75rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -93,7 +93,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.films-section-title {
+.section-title {
   font-size: 1.8rem;
   color: #e8e0d0;
   letter-spacing: 1px;
@@ -207,14 +207,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.films-footer {
+.footer {
   background: #060609;
   border-top: 1px solid rgba(200, 160, 80, 0.15);
   padding: 2rem 5rem;
   text-align: center;
 }
 
-.films-footer-logo {
+.footer-logo {
   font-size: 1.1rem;
   color: #c8a050;
   letter-spacing: 3px;
@@ -222,7 +222,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.films-footer-copy {
+.footer-copy {
   font-size: 0.75rem;
   color: #4a4535;
   font-family: Arial, sans-serif;
@@ -238,15 +238,15 @@ body {
     padding: 3rem 3rem;
   }
 
-  .films-hero-content {
+  .hero-content {
     padding-left: 3rem;
   }
 
-  .films-hero-title {
+  .hero-title {
     font-size: 3.5rem;
   }
 
-  .films-footer {
+  .footer {
     padding: 2rem 3rem;
   }
 }
@@ -260,19 +260,31 @@ body {
     padding: 2rem 1.5rem;
   }
 
-  .films-hero-content {
+  .hero-content {
     padding-left: 1.5rem;
   }
 
-  .films-hero-title {
+  .hero-title {
     font-size: 2.5rem;
   }
 
-  .films-hero {
+  .hero {
     height: 380px;
   }
 
-  .films-footer {
+  .navbar {
+    padding: 0 1.2rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.1rem;
+  }
+
+  .navbar-links {
+    gap: 1.2rem;
+  }
+
+  .footer {
     padding: 2rem 1.5rem;
   }
 }
@@ -282,7 +294,11 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .films-hero-title {
+  .hero-title {
     font-size: 2rem;
+  }
+
+  .navbar-links {
+    display: none; /* hide links on very small screens */
   }
 }
