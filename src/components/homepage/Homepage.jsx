@@ -12,10 +12,26 @@ const Homepage = () => {
     };
 
     const houses = [
-        { id: 'gryffindor', name: 'Gryffindor', color: '#740001', icon: '' },
-        { id: 'ravenclaw', name: 'Ravenclaw', color: '#0e1a40', icon: '🦅' },
-        { id: 'hufflepuff', name: 'Hufflepuff', color: '#ecb939', icon: '🦡' },
-        { id: 'slytherin', name: 'Slytherin', color: '#1a472a', icon: '🐍' },
+        {
+            id: 'gryffindor', name: 'Gryffindor', color: '#740001',
+            img: 'https://upload.wikimedia.org/wikipedia/en/6/6c/GryffindorCrest.png',
+            emoji: '🦁'
+        },
+        {
+            id: 'ravenclaw', name: 'Ravenclaw', color: '#0e1a40',
+            img: 'https://upload.wikimedia.org/wikipedia/en/7/71/RavenclawCrest.png',
+            emoji: '🦅'
+        },
+        {
+            id: 'hufflepuff', name: 'Hufflepuff', color: '#ecb939',
+            img: 'https://upload.wikimedia.org/wikipedia/en/0/09/HufflepuffCrest.png',
+            emoji: '🦡'
+        },
+        {
+            id: 'slytherin', name: 'Slytherin', color: '#1a472a',
+            img: 'https://upload.wikimedia.org/wikipedia/en/1/10/SlytherinCrest.png',
+            emoji: '🐍'
+        },
     ];
 
     return (
@@ -76,7 +92,14 @@ const Homepage = () => {
                                 onMouseLeave={() => setActiveHouse(null)}
                                 onClick={() => playSound('magic')}
                             >
-                                <div className="shield-icon"><img src={house.icon} /></div>
+                                <div className="shield-icon">
+                                    <img
+                                        src={house.img}
+                                        alt={house.name}
+                                        onError={(e) => { e.target.style.display='none'; e.target.nextSibling.style.display='block'; }}
+                                    />
+                                    <span style={{ display: 'none', fontSize: '2rem' }}>{house.emoji}</span>
+                                </div>
                                 <span>{house.name}</span>
                             </div>
                         ))}
@@ -94,12 +117,26 @@ const Homepage = () => {
                 </div>
                 <div className="quiz-grid">
                     {[
-                        { title: "Can you complete the Harry Potter and the Philosopher's Stone book/film comparisons?", time: "5 min", color: "#0e1a40" },
-                        { title: "Can you guess the Professor from these quotes?", time: "3 min", color: "#1a472a" },
-                        { title: "Can you identify the potion from the description?", time: "4 min", color: "#740001" }
+                        {
+                            title: "Can you complete the Harry Potter and the Philosopher's Stone book/film comparisons?",
+                            time: "5 min", color: "#0e1a40",
+                            img: "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg"
+                        },
+                        {
+                            title: "Can you guess the Professor from these quotes?",
+                            time: "3 min", color: "#1a472a",
+                            img: "https://upload.wikimedia.org/wikipedia/en/b/b6/Harry_Potter_and_the_Goblet_of_Fire_cover.png"
+                        },
+                        {
+                            title: "Can you identify the potion from the description?",
+                            time: "4 min", color: "#740001",
+                            img: "https://upload.wikimedia.org/wikipedia/en/b/b5/Harry_Potter_and_the_Half-Blood_Prince_cover.jpg"
+                        }
                     ].map((quiz, i) => (
                         <div key={i} className="quiz-card" style={{ borderColor: quiz.color }}>
-                            <div className="quiz-image-placeholder"></div>
+                            <div className="quiz-image-placeholder">
+                                <img src={quiz.img} alt={quiz.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                            </div>
                             <div className="quiz-info">
                                 <i className="fas fa-bolt" style={{ color: quiz.color }}></i>
                                 <h3>{quiz.title}</h3>
@@ -114,7 +151,7 @@ const Homepage = () => {
             {/* News Feature: Butterbeer */}
             <section className="news-banner banner-butterbeer">
                 <div className="banner-image">
-                    <img src="https://images.ctfassets.net/usf1vwtuqyxm/3nZzLpLqY4W6oI0k2uUq6S/8d1d1d1d1d1d1d/butterbeer_season.jpg" alt="Butterbeer" />
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg" alt="Butterbeer" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div className="banner-content">
                     <h2>Bring your wizarding portrait into butterbeer season</h2>
@@ -131,7 +168,7 @@ const Homepage = () => {
                     <button className="btn-outline">Read more</button>
                 </div>
                 <div className="banner-image">
-                    <img src="https://images.ctfassets.net/usf1vwtuqyxm/4ZXZXZXZXZ/hbo_series_cast.jpg" alt="HBO Series" />
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg" alt="Harry Potter Series" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
             </section>
 
@@ -165,9 +202,28 @@ const Homepage = () => {
                     <span className="dot-line"></span>
                 </div>
                 <div className="picks-grid">
-                    {['Ron Weasley', 'Butterbeer', 'Sybill Trelawney', 'Remus Lupin'].map(name => (
+                    {[
+                        {
+                            name: 'Ron Weasley',
+                            img: 'https://upload.wikimedia.org/wikipedia/en/5/5c/Harry_Potter_and_the_Chamber_of_Secrets.jpg'
+                        },
+                        {
+                            name: 'Butterbeer',
+                            img: 'https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg'
+                        },
+                        {
+                            name: 'Sybill Trelawney',
+                            img: 'https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg'
+                        },
+                        {
+                            name: 'Remus Lupin',
+                            img: 'https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg'
+                        },
+                    ].map(({ name, img }) => (
                         <div key={name} className="pick-card">
-                            <div className="pick-image"></div>
+                            <div className="pick-image">
+                                <img src={img} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: '50%' }} />
+                            </div>
                             <h3>{name}</h3>
                         </div>
                     ))}

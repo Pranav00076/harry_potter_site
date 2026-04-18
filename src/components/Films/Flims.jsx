@@ -18,7 +18,7 @@ const films = [
     year: 2002,
     number: "Film 02",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BMjE0YjUzNDUtMjc5OS00MTU3LTgxMmUtODhkOThkMzdjNWI4XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "https://upload.wikimedia.org/wikipedia/en/3/35/Harry_Potter_and_the_Chamber_of_Secrets_%28film%29.jpg",
   },
   {
     title: "Harry Potter and the Prisoner of Azkaban",
@@ -26,7 +26,7 @@ const films = [
     year: 2004,
     number: "Film 03",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BMTY4OTM3MDk4NV5BMl5BanBnXkFtZTcwNjYyOTUzMw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "https://upload.wikimedia.org/wikipedia/en/8/8b/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg",
   },
   {
     title: "Harry Potter and the Goblet of Fire",
@@ -42,7 +42,7 @@ const films = [
     year: 2007,
     number: "Film 05",
     poster:
-      "https://m.media-amazon.com/images/M/MV5BOTA3ODI3OTMtNWYzMS00MGUxLWFlNWYtODI1NjAwMTM1MWMwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg",
   },
   {
     title: "Harry Potter and the Half-Blood Prince",
