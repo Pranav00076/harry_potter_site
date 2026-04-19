@@ -1,4 +1,4 @@
-import "./StarField.css"
+import "./Starfield.css"
 import { useRef,useEffect } from "react";
 
 function StarField() {
