@@ -1,0 +1,354 @@
+:root {
+  --hp-navy:    #0a0a1a;
+  --hp-navy-2:  #0d0d2b;
+  --hp-navy-3:  #12123a;
+  --hp-gold:    #c9a84c;
+  --hp-gold-lt: #e8c97a;
+  --hp-gold-dk: #8a6a20;
+  --hp-white:   #f0eadc;
+  --hp-grey:    #9a95a8;
+  --hp-card-bg: rgba(13, 13, 43, 0.85);
+
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Playfair Display', serif;
+  --font-text:    'EB Garamond', serif;
+
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.facts-starfield {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.fact-file-page {
+    background: #0a0a1a;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-bottom: 2rem;
+}
+
+/* Hero Section */
+.fact-file-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('https://images.ctfassets.net/usf1vwtuqyxm/1W6uUrOE9Yv6MAr9qnXF9B/eb14cb751f896b0f3408f97ac26e6d1c/Hogwarts_Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 180px; 
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 10, 26, 0.4), #0a0a1a);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    max-width: 50rem;
+    padding: 0 2rem;
+}
+
+.hero-content p{
+    text-align: center;
+   font-size: 1.2rem;
+    color: #a0a0c0;
+    line-height: 1.6;
+    margin-left: 1rem;
+}
+
+.fact-file-hero h1 {
+    font-family: 'Cinzel', serif; 
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    line-height: 1.2;
+    width: 100%;
+    background: linear-gradient(to right, #fff, #c9a84c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-divider span {
+    height: 1px;
+    width: 100px;
+    background: linear-gradient(to right, transparent, #c9a84c, transparent);
+}
+
+.hero-divider i {
+    color: #c9a84c;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 10px rgba(201, 168, 76, 0.5));
+}
+
+
+/* Controls Section */
+.fact-file-controls {
+    max-width: 1200px;
+    margin: -3rem auto 3rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.category-nav {
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cat-btn {
+    background: transparent;
+    border: none;
+    color: #a0a0c0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.cat-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.cat-btn.active {
+    background: #c9a84c;
+    color: #0a0a1a;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 1.5rem;
+    color: #c9a84c;
+}
+
+.search-wrapper input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 1rem 1rem 1rem 3.5rem;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.search-wrapper input:focus {
+    border-color: #c9a84c;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+}
+
+/* Grid Section */
+.fact-file-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.grid-header h2 {
+    font-size: 2rem;
+    font-family: 'Cinzel', serif;
+}
+
+.results-count {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+}
+
+.fact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Card Styling */
+.fact-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(201, 168, 76, 0.15);
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.fact-card:hover .card-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-category-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(10, 10, 26, 0.8);
+    color: #c9a84c;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #c9a84c;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-attribute {
+    color: #c9a84c;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+}
+
+.card-content p {
+    color: #a0a0c0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    background: transparent;
+    border: none;
+    color: #c9a84c;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    transition: gap 0.3s ease;
+}
+
+.read-more-btn:hover {
+    gap: 0.8rem;
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 5rem 0;
+    color: #a0a0c0;
+}
+
+.no-results i {
+    font-size: 3rem;
+    color: #c9a84c;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fact-file-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .category-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 20px;
+    }
+    
+    .fact-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,15 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import Homepage from './components/homepage/Homepage.jsx'
 import Films from './components/Films/Flims'
 import BooksPage from './components/pages/BooksPage'
 import News from './components/News/News'
+import FactFile from './components/FactFile/FactFile.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.jsx'
+import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Homepage />,
   },
   {
     path: "/films",
@@ -23,10 +26,16 @@ const router = createBrowserRouter([
     path: "/news",
     element: <News />,
   },
+  {
+    path: "/facts",
+    element: <FactFile />
+  }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <StarField />
     <RouterProvider router={router} />
+    <Footer />
   </StrictMode>,
 )

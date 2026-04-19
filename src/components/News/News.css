@@ -348,32 +348,6 @@
   margin: 0;
 }
 
-/* ─── Footer ───────────────────────────────────────────────────────────────── */
-.news-footer {
-  text-align: center;
-  padding: 0 24px 40px;
-}
-
-.news-footer__line {
-  width: 200px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(212, 175, 55, 0.4),
-    transparent
-  );
-  margin: 0 auto 20px;
-}
-
-.news-footer__copy {
-  font-family: var(--font-heading, 'Cinzel Decorative', serif);
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(212, 175, 55, 0.35);
-}
-
 /* ─── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .news-grid {

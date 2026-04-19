@@ -22,12 +22,8 @@ const Homepage = () => {
         <div className="homepage">
             {/* Navbar */}
             <Navbar />
-
             {/* Hero Section */}
             <section className="hero">
-                <video autoPlay loop muted className="hero-video">
-                    <source src="https://videos.ctfassets.net/usf1vwtuqyxm/7pB9lO2mE8q7G9/d3c1c1c1c1c1c1c1/hero_smoke_desktop.mp4" type="video/mp4" />
-                </video>
                 <div className="hero-content">
                     <h1>Harry Potter and the Half-Blood Prince (Full-Cast Edition) is out now</h1>
                     <p>You can now listen to the first ever full-cast audiobook of Half-Blood Prince. Featuring a powerhouse ensemble of over 200 performers...</p>
@@ -173,24 +169,6 @@ const Homepage = () => {
                     ))}
                 </div>
             </section>
-
-            {/* Footer */}
-            <footer className="footer glass">
-                <div className="footer-content">
-                    <div className="footer-logo">
-                        <img src="https://www.wizardingworld.com/pf/resources/images/logos/hp-logo.svg" alt="HP Logo" />
-                    </div>
-                    <nav className="footer-nav">
-                        <a href="#">About Us</a>
-                        <a href="#">Help Center</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Use</a>
-                    </nav>
-                </div>
-                <div className="footer-bottom">
-                    <p>Copyright &copy; J.K. Rowling/Wizarding World Digital. All rights reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 };

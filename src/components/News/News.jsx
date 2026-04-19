@@ -194,14 +194,6 @@ const News = () => {
           ))}
         </div>
       </section>
-
-      {/* ── Footer ── */}
-      <footer className="news-footer">
-        <div className="news-footer__line" />
-        <p className="news-footer__copy">
-          © {new Date().getFullYear()} · The Wizarding World of Harry Potter
-        </p>
-      </footer>
     </div>
   );
 };

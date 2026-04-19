@@ -91,7 +91,12 @@ const Navbar = () => {
         <div className="nav-link">HOGWARTS SORTING</div>
         <div className="nav-link">PORTRAIT MAKER</div>
         <div className="nav-link">PATRONUS EXPERIENCE</div>
-        <div className="nav-link">FACT FILES</div>
+        <div>
+          <Link to={"/facts"}>
+            <div className="nav-link">FACT FILES</div>
+          </Link>
+        </div>
+        
         <div className="nav-link">SHOP</div>
       </div>
 

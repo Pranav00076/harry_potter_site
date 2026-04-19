@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import './Flims.css'
 import MovieCard from './MovieCard'
+import StarField from "../reusable_comps/Navbar/Starfield/Starfield";
 
 
 const films = [
@@ -74,9 +75,8 @@ const films = [
 function Flims() {
   return (
     <div className="app">
-
       <Navbar />
-
+      <StarField />
       <section className="film-hero">
         <div className="film-hero-bg"></div>
         <div className="film-hero-content">
@@ -102,13 +102,6 @@ function Flims() {
           ))}
         </div>
       </section>
-
-      <footer className="footer">
-        <p className="footer-logo">Harry Potter</p>
-        <p className="footer-copy">
-          © Wizarding World. Fan tribute page — all rights belong to their respective owners.
-        </p>
-      </footer>
 
     </div>
   );
