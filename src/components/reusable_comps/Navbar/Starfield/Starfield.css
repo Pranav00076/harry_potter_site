@@ -1,0 +1,27 @@
+:root {
+  --hp-navy:    #0a0a1a;
+  --hp-navy-2:  #0d0d2b;
+  --hp-navy-3:  #12123a;
+  --hp-gold:    #c9a84c;
+  --hp-gold-lt: #e8c97a;
+  --hp-gold-dk: #8a6a20;
+  --hp-white:   #f0eadc;
+  --hp-grey:    #9a95a8;
+  --hp-card-bg: rgba(13, 13, 43, 0.85);
+
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Playfair Display', serif;
+  --font-text:    'EB Garamond', serif;
+
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
