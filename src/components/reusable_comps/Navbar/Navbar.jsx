@@ -88,7 +88,12 @@ const Navbar = () => {
 
         {/* Static items */}
         <div className="nav-link">J.K. ROWLING ARCHIVE</div>
-        <div className="nav-link">HOGWARTS SORTING</div>
+        
+        <div>
+          <Link to={"/SortingHat"}>
+            <div className="nav-link">HOGWARTS SORTING</div>
+          </Link>
+        </div>
         <div>
           <Link to={"/facts"}>
             <div className="nav-link">FACT FILES</div>

@@ -6,6 +6,7 @@ import BooksPage from './components/pages/BooksPage'
 import News from './components/News/News'
 import Features from "./components/Features/Features.jsx"
 import FactFile from './components/FactFile/FactFile.jsx'
+import SortingHome from './components/SortingHat/SortingHome.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.jsx'
 import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/facts",
     element: <FactFile />
+  },
+  {
+    path: "/SortingHat",
+    element: <SortingHome/>
   }
 ])
 
