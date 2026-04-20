@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "./harry_potter_logo.png"
+import logo from "/Users/aryachadha/Documents/GitHub/harry_potter_site/public/logo.png"
 import "./Navbar.css";
 
 const menuData = {
