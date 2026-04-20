@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./FactFile.css";
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import StarField from "../reusable_comps/Navbar/Starfield/Starfield";
+import fact from "../../../public/fact-files-header.svg"
 
 const FACT_DATA = [
   {
@@ -114,19 +115,14 @@ const FactFile = () => {
       <StarField />
       <div className="fact-file-page">
         <header className="fact-file-hero">
+          <img src={fact} alt="fact-file-header" width="100%"/>
           <div className="hero-overlay"></div>
           <div className="hero-content">
-            <p className="hero-content-p1">Discover the secrets</p>
-            <h1>Wizarding World Fact Files</h1>
             <div className="hero-divider">
               <span></span>
               <i className="fas fa-bolt"></i>
               <span></span>
             </div>
-            <p className="subtitle">
-              Dive into the official encyclopedia of characters, locations, and
-              magical wonders.
-            </p>
           </div>
         </header>
 
