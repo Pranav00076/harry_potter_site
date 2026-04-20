@@ -5,19 +5,19 @@ import "./Navbar.css";
 
 const menuData = {
   "NEWS & FEATURES": [
-    { title: "NEWS", image: "/images/news.jpg", link: "/news" },
-    { title: "FEATURES", image: "/images/features.jpg",link: "/features"},
+    { title: "NEWS", image: "https://wallpapercave.com/wp/wp9483296.jpg", link: "/news" },
+    { title: "FEATURES", image: "https://w0.peakpx.com/wallpaper/952/791/HD-wallpaper-harry-potter-harry-potter-deathly-hallows.jpg",link: "/features"},
   ],
   "QUIZZES & PUZZLES": [
-    { title: "QUIZZES", image: "/images/quizzes.jpg" },
-    { title: "PUZZLES", image: "/images/puzzles.jpg" },
+    { title: "QUIZZES", image: "https://i.pinimg.com/236x/dc/1b/31/dc1b316fe6bee2b0011f0aebbea115ad.jpg" },
+    { title: "PUZZLES", image: "https://sw6.elbenwald.de/media/7b/18/2f/1743578257/E1087630_3.jpg" },
   ],
   DISCOVER: [
-    { title: "BOOKS", image: "/images/books.jpg", link: "/books" },
-    { title: "FILMS", image: "/images/films.jpg", link: "/films" },
-    { title: "PORTKEY GAMES", image: "/images/games.jpg" },
-    { title: "ON STAGE", image: "/images/stage.jpg" },
-    { title: "EXPERIENCES", image: "/images/exp.jpg" },
+    { title: "BOOKS", image: "https://images.unsplash.com/photo-1600189261867-30e5ffe7b8da?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFycnklMjBwb3R0ZXIlMjBib29rfGVufDB8fDB8fHww", link: "/books" },
+    { title: "FILMS", image: "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg", link: "/films" },
+    { title: "PORTKEY GAMES", image: "https://cdn-hogwartslegacy.warnerbrosgames.com/community/slide-07.jpg" },
+    { title: "ON STAGE", image: "https://res.cloudinary.com/dwzhqvxaz/image/upload/v1749740938/Titles/Harry%20Potter/HPCC_2025_Prod2_1920x1080.jpg" },
+    { title: "EXPERIENCES", image: "https://media.timeout.com/images/106007502/image.jpg" },
   ],
 };
 
@@ -89,8 +89,6 @@ const Navbar = () => {
         {/* Static items */}
         <div className="nav-link">J.K. ROWLING ARCHIVE</div>
         <div className="nav-link">HOGWARTS SORTING</div>
-        <div className="nav-link">PORTRAIT MAKER</div>
-        <div className="nav-link">PATRONUS EXPERIENCE</div>
         <div>
           <Link to={"/facts"}>
             <div className="nav-link">FACT FILES</div>

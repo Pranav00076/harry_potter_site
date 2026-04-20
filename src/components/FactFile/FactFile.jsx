@@ -11,7 +11,7 @@ const FACT_DATA = [
     description:
       "The Boy Who Lived, known for his bravery and being the Chosen One who eventually defeated Lord Voldemort.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/3S6uUrOE9Yv6MAr9qnXF9B/eb14cb751f896b0f3408f97ac26e6d1c/HarryPotter_WB_F1_HarryPotterAgainstDarkWall_Hero_V1.jpg",
+      "https://darksidetoy.com/images/virtuemart/product/hp01.jpg",
     attribute: "Brave, Resilient",
   },
   {
@@ -21,7 +21,7 @@ const FACT_DATA = [
     description:
       "A brilliant witch and Harry's close friend, known for her logic, intelligence, and unwavering loyalty.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/28reNbeXm8q62mI40cwO2U/68916d80d1e39b98c36294a20b78c934/HermioneGranger_WB_F2_HermioneInsideCommonRoom_Hero.jpg",
+      "https://c4.wallpaperflare.com/wallpaper/293/813/229/actresses-emma-watson-hermione-granger-wallpaper-preview.jpg",
     attribute: "Intelligent, Loyal",
   },
   {
@@ -31,7 +31,7 @@ const FACT_DATA = [
     description:
       "Harry's loyal best friend, known for his humor, bravery, and being an integral part of the trio.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/17mFqof8vqe2qE2Iq8K26S/3d7d7d7d7d7d7d7d/RonWeasley_WB_F1_RonCommonRoom_Hero.jpg",
+      "https://queenstudios.shop/cdn/shop/files/29.QueenStudiosRonWeasley1-6ScaleFigure_620x.jpg?v=1715775669",
     attribute: "Humorous, Loyal",
   },
   {
@@ -41,7 +41,7 @@ const FACT_DATA = [
     description:
       "The premier school for witchcraft and wizardry in Great Britain, hidden in the Scottish Highlands.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/4To9Hqoo7S8W6I8O2OqUea/1d1d1d1d1d1d1d1d/Hogwarts_HogwartsCastle_Hero.jpg",
+      "https://images5.alphacoders.com/120/thumb-1920-1207344.jpg",
     attribute: "Ancient, Magical",
   },
   {
@@ -51,7 +51,7 @@ const FACT_DATA = [
     description:
       "A magical hidden cobblestoned shopping area in London for witches and wizards.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/5To7NjoO8S8W6I8O2OqUea/2d2d2d2d2d2d2d2d/DiagonAlley_Hero.jpg",
+      "https://external-preview.redd.it/an-hd-picture-of-diagon-alley-from-universal-orlando-v0-GEOhPvsWEkZE5im4_36JbD3Pj5hKPf2RSUQ54EPRDnU.jpg?auto=webp&s=2a6c533723a704f7a05135adbff76f42987279bb",
     attribute: "Bustling, Magical",
   },
   {
@@ -61,7 +61,7 @@ const FACT_DATA = [
     description:
       "A magical creature with the front half of an eagle and the hindquarters of a horse.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/6To8NkoO9S9W7I9O3OqUeb/3d3d3d3d3d3d3d3d/Buckbeak_Hero.jpg",
+      "https://e0.pxfuel.com/wallpapers/852/1002/desktop-wallpaper-buckbeak-hippogriff.jpg",
     attribute: "Proud, Powerful",
   },
   {
@@ -71,7 +71,7 @@ const FACT_DATA = [
     description:
       "A mythical bird that bursts into flames when it dies and is reborn from the ashes.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/7To9NloP0S0W8I0O4OqUec/4d4d4d4d4d4d4d4d/Fawkes_Hero.jpg",
+      "https://c4.wallpaperflare.com/wallpaper/640/554/473/phoenix-bird-red-phoenix-wallpaper-preview.jpg",
     attribute: "Immortal, Healing",
   },
   {
@@ -81,7 +81,7 @@ const FACT_DATA = [
     description:
       "The most powerful wand in existence, and one of the three Deathly Hallows.",
     image:
-      "https://images.ctfassets.net/usf1vwtuqyxm/8To0NmoQ1S1W9I1O5OqUed/5d5d5d5d5d5d5d5d/ElderWand_Hero.jpg",
+      "https://i.redd.it/o6ohwswv4u351.jpg",
     attribute: "Unbeatable, Ancient",
   },
 ];
