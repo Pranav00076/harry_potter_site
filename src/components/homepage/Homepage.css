@@ -470,18 +470,38 @@ h1, h2, h3, h4 {
 .pick-card div {
   width: 100%;
   aspect-ratio: 1;
-  background: #1e2533;
   border-radius: 50%;
   margin-bottom: 20px;
   border: 4px solid var(--border-color);
   transition: border-color 0.3s ease;
 }
 .pick-image0{
-  background: url("https://w0.peakpx.com/wallpaper/854/745/HD-wallpaper-rupert-grint-emma-harry-potter-radcliffe-ron-watson-weasley-thumbnail.jpg");
+  background-image: url("https://queenstudios.shop/cdn/shop/files/29.QueenStudiosRonWeasley1-6ScaleFigure_620x.jpg?v=1715775669");
+  background-position: center;
+  background-size: cover;
+}
+
+.pick-image1{
+  background-image: url("https://darksidetoy.com/images/virtuemart/product/hp01.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.pick-image2{
+  background-image: url("https://media.harrypotterfanzone.com/sybill-trelawney-prisoner-of-azkaban-portrait.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+.pick-image3{
+  background-image: url("https://media.harrypotterfanzone.com/professor-remus-lupin.jpg");
+  background-position: top;
+  background-size: cover;
 }
 
 .pick-card:hover .pick-image {
   border-color: var(--accent-gold);
+
 }
 
 .pick-card h3 {

@@ -149,7 +149,7 @@ const Homepage = () => {
                     <span className="dot-line"></span>
                 </div>
                 <div className="picks-grid">
-                    {['Ron Weasley', 'Butterbeer', 'Sybill Trelawney', 'Remus Lupin'].map((name,i) => (
+                    {['Ron Weasley', 'Harry Potter', 'Sybill Trelawney', 'Remus Lupin'].map((name,i) => (
                         <div key={name} className="pick-card">
                             <div className={`pick-image${i}`}></div>
                             <h3>{name}</h3>
