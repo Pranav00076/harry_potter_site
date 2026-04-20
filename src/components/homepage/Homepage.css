@@ -73,6 +73,7 @@ h1, h2, h3, h4 {
 .hero-content {
   max-width: 600px;
   z-index: 1;
+  margin-left: -10em;
 }
 
 .hero-content h1 {
@@ -80,7 +81,6 @@ h1, h2, h3, h4 {
   margin-bottom: 20px;
   line-height: 1.7;
   width: 70%;
-  margin-left: -8em;
 }
 
 .hero-content p {

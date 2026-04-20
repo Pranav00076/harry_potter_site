@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./FactFile.css";
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import StarField from "../reusable_comps/Navbar/Starfield/Starfield";
-import fact from "../../../public/fact-files-header.svg"
+import fact from "./fact-files-header.svg"
 
 const FACT_DATA = [
   {
