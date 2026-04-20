@@ -6,7 +6,7 @@ import "./Navbar.css";
 const menuData = {
   "NEWS & FEATURES": [
     { title: "NEWS", image: "/images/news.jpg", link: "/news" },
-    { title: "FEATURES", image: "/images/features.jpg" },
+    { title: "FEATURES", image: "/images/features.jpg",link: "/features"},
   ],
   "QUIZZES & PUZZLES": [
     { title: "QUIZZES", image: "/images/quizzes.jpg" },
