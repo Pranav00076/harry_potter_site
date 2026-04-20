@@ -3,7 +3,13 @@ import React from 'react';
 function MovieCard({ film }) {
   return (
     <div className="film-card">
-      <div className="film-poster-wrapper">
+      <a 
+        href={film.url || "#"} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="film-poster-wrapper"
+        style={{ display: 'block', cursor: 'pointer' }}
+      >
         <img
           src={film.poster}
           alt={film.title}
@@ -14,7 +20,7 @@ function MovieCard({ film }) {
         />
         <div className="poster-overlay"></div>
         <div className="play-btn">&#9654;</div>
-      </div>
+      </a>
 
       <div className="film-info">
         <p className="film-number">{film.number}</p>

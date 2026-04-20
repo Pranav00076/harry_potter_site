@@ -13,6 +13,7 @@ const films = [
     number: "Film 01",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/1f5EjNhKvbBlED0crJAzkN/10031c9cbfbe2683b68781cd3b20289d/hp1-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-sorcerers-stone/1971000398?search_query=harry"
   },
   {
     title: "Harry Potter and the Chamber of Secrets",
@@ -21,6 +22,7 @@ const films = [
     number: "Film 02",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/4u9jH4UqdaWzWBVFEcHtRJ/568c2190aa8e33223537fb6e32a72c96/hp2-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-chamber-of-secrets/1971000409?search_query=harry"
   },
   {
     title: "Harry Potter and the Prisoner of Azkaban",
@@ -29,6 +31,7 @@ const films = [
     number: "Film 03",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/231TsijamyKCGe6VvOYW9I/f796a168726a189209f28928d77b7daa/hp3-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-prisoner-of-azkaban/1971000405?search_query=harry"
   },
   {
     title: "Harry Potter and the Goblet of Fire",
@@ -37,6 +40,7 @@ const films = [
     number: "Film 04",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/600bJMHJpBT6QdHF29sKvp/243f8920e0e372bbf43fd176b21e057b/hp4-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-goblet-of-fire/1971000404?search_query=harry"
   },
   {
     title: "Harry Potter and the Order of the Phoenix",
@@ -45,6 +49,7 @@ const films = [
     number: "Film 05",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/6Tl1jqky9PZvDStEJ156HX/8f1b10b409a71c6ef537d5f36c2839b0/hp5-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-order-of-the-phoenix/1971000408?search_query=harry"
   },
   {
     title: "Harry Potter and the Half-Blood Prince",
@@ -53,22 +58,25 @@ const films = [
     number: "Film 06",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/2aXcRaGMOI4O1qEoj1JlR5/c1d6eb5ccd75df65001bc1a2f7787a39/hp6-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-half-blood-prince/1971000403?search_query=harry"
   },
   {
     title: "Harry Potter and the Deathly Hallows – Part 1",
     shortTitle: "Deathly Hallows – Part 1",
     year: 2010,
-    number: "Film 07",
+    number: "Film 07 - Part 1",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/2bgFa1qVAalbxgEhVhthon/a1cda92470a76d44266040b8d891c9d0/hp7-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-deathly-hallows-part-1/1971000406?search_query=harry"
   },
   {
     title: "Harry Potter and the Deathly Hallows – Part 2",
     shortTitle: "Deathly Hallows – Part 2",
     year: 2011,
-    number: "Film 08",
+    number: "Film 07 - Part 2",
     poster:
       "https://contentful.harrypotter.com/usf1vwtuqyxm/4Hmi2PKjtlhsEy2vgwarm8/f6156fbb05f86c90db209641e885b9b3/hp8-poster.png",
+    url:"https://www.hotstar.com/in/movies/harry-potter-and-the-deathly-hallows-part-2/1971000407?search_query=harry"
   },
 ];
 
