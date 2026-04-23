@@ -3,8 +3,8 @@ import Navbar from "../reusable_comps/Navbar/Navbar";
 import './SortingHome.css';
 import SortingChat from './SortingChat';
 
-import sortingHatImg from '../../../public/sorting-hat.png'; 
-import goldLogo from '../../../public/logo.png';
+import sortingHatImg from './sorting-hat.png'; 
+import goldLogo from './logo.png';
 import { Link } from 'react-router-dom';
 
 const SortingHome = () => {

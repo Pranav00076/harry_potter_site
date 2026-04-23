@@ -24,13 +24,16 @@ const menuData = {
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [sidebarActiveMenu, setSidebarActiveMenu] = useState(null);
   const navRef = useRef();
 
   // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (!navRef.current.contains(e.target)) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
         setActiveMenu(null);
+        setIsSidebarOpen(false);
       }
     };
     const handleScroll = () => {
@@ -38,20 +41,43 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
+
+    if (isSidebarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = "auto";
     };
-  }, []);
+  }, [isSidebarOpen]);
 
   const toggleMenu = (menu) => {
     setActiveMenu((prev) => (prev === menu ? null : menu));
   };
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    if (isSidebarOpen) setSidebarActiveMenu(null);
+  };
+
+  const toggleSidebarSubMenu = (menu) => {
+    setSidebarActiveMenu((prev) => (prev === menu ? null : menu));
+  };
+
   return (
-    <nav className={`navbar ${isScrolled ? "glass" : ""}`}>
+    <nav className={`navbar ${isScrolled ? "glass" : ""}`} ref={navRef}>
+      {/* Sidebar Overlay */}
+      <div className={`sidebar-overlay ${isSidebarOpen ? "show" : ""}`} onClick={toggleSidebar}></div>
+
       {/* TOP BAR */}
       <div className="nav-top">
+        <div className="menu-toggle" onClick={toggleSidebar}>
+          <i className={isSidebarOpen ? "fas fa-times" : "fas fa-bars"}></i>
+        </div>
         <div className="social-links">
           <i className="fab fa-youtube"></i>
           <i className="fab fa-tiktok"></i>
@@ -73,8 +99,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MENU */}
-      <div className="nav-bottom">
+      {/* DESKTOP MENU */}
+      <div className="nav-bottom desktop-menu">
         {Object.keys(menuData).map((item) => (
           <div
             key={item}
@@ -85,35 +111,64 @@ const Navbar = () => {
             {item} <span className="arrow">▾</span>
           </div>
         ))}
-
-        {/* Static items */}
         <div className="nav-link">J.K. ROWLING ARCHIVE</div>
-        
-        <div>
-          <Link to={"/SortingHat"}>
-            <div className="nav-link">HOGWARTS SORTING</div>
-          </Link>
-        </div>
-        <div>
-          <Link to={"/facts"}>
-            <div className="nav-link">FACT FILES</div>
-          </Link>
-        </div>
-        
-        <div className="nav-link">SHOP</div>
+        <Link to="/SortingHat" className="nav-link">HOGWARTS SORTING</Link>
+        <Link to="/facts" className="nav-link">FACT FILES</Link>
       </div>
 
-      {/* MEGA MENU */}
-      <div className={`mega-menu ${activeMenu ? "show" : ""}`}>
+      {/* MOBILE SIDEBAR */}
+      <div className={`mobile-sidebar ${isSidebarOpen ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <div className="close-menu" onClick={toggleSidebar}>
+            <i className="fas fa-times"></i>
+          </div>
+          <div className="sidebar-search">
+            <button className="search-btn">
+               <i className="fas fa-search"></i> SEARCH
+            </button>
+          </div>
+        </div>
+
+        <div className="sidebar-links">
+          {Object.keys(menuData).map((item) => (
+            <div key={item} className="sidebar-link-group">
+              <div 
+                className={`sidebar-link ${sidebarActiveMenu === item ? "active" : ""}`} 
+                onClick={() => toggleSidebarSubMenu(item)}
+              >
+                {item} <i className={`fas ${sidebarActiveMenu === item ? "fa-chevron-down" : "fa-chevron-right"}`}></i>
+              </div>
+              <div className={`sidebar-submenu ${sidebarActiveMenu === item ? "show" : ""}`}>
+                {menuData[item].map((sub, idx) => (
+                  <Link 
+                    key={idx} 
+                    to={sub.link || "#"} 
+                    className="submenu-item"
+                    onClick={() => setIsSidebarOpen(false)}
+                  >
+                    {sub.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div className="sidebar-link">J.K. ROWLING ARCHIVE</div>
+          <Link to="/SortingHat" className="sidebar-link" onClick={() => setIsSidebarOpen(false)}>HOGWARTS SORTING</Link>
+          <Link to="/facts" className="sidebar-link" onClick={() => setIsSidebarOpen(false)}>FACT FILES</Link>
+        </div>
+      </div>
+
+      {/* MEGA MENU (Desktop Only) */}
+      <div className={`mega-menu desktop-only ${activeMenu ? "show" : ""}`}>
         <div className="mega-content">
           {activeMenu &&
             menuData[activeMenu].map((card, i) => (
               <div key={i} className="mega-card">
                 <Link to={card.link}>
-                <img src={card.image} alt="" />
-                <div className="mega-overlay">
-                  <span>{card.title}</span>
-                </div>
+                  <img src={card.image} alt="" />
+                  <div className="mega-overlay">
+                    <span>{card.title}</span>
+                  </div>
                 </Link>
               </div>
             ))}
