@@ -6,7 +6,7 @@ import "./Quizzes.css";
 // ─── Featured Quiz ─────────────────────────────────────────────────────────────
 const featuredQuiz = {
   image:
-    "https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg",
+    "https://contentful.harrypotter.com/usf1vwtuqyxm/1f5EjNhKvbBlED0crJAzkN/10031c9cbfbe2683b68781cd3b20289d/hp1-poster.png",
   title: "The Riddikulus-ly easy Marauders quiz",
   description:
     "From nicknames to Hogwarts houses, how well do you know this ragtag group of friends? Test your Marauder knowledge in our criminally easy quiz.",
@@ -111,7 +111,7 @@ const Quizzes = () => {
                 className="qz-spotlight__img"
                 onError={(e) => {
                   e.target.src =
-                    "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg";
+                    "https://mlpnoq1hotss.i.optimole.com/cb:6w_Z.129d6/w:1200/h:675/q:mauto/f:best/ig:avif/https://www.suo.ca/wp-content/uploads/2023/11/HP-Trivia-Part-2-Bounce-1280-x-700-px.png";
                 }}
               />
             </div>
