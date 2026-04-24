@@ -12,6 +12,7 @@ import Puzzles from "./components/Puzzles/Puzzles.jsx"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.jsx'
 import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
+import Archive from './components/Archive/Archive.jsx'
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "/Puzzles",
     element: <Puzzles/>
+  },
+  {
+    path: "/Archive",
+    element: <Archive/>
   }
 ])
 

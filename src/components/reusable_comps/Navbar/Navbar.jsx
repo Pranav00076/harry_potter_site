@@ -111,7 +111,7 @@ const Navbar = () => {
             {item} <span className="arrow">▾</span>
           </div>
         ))}
-        <div className="nav-link">J.K. ROWLING ARCHIVE</div>
+        <Link to="/Archive" className="nav-link">J.K. ROWLING ARCHIVE</Link>
         <Link to="/SortingHat" className="nav-link">HOGWARTS SORTING</Link>
         <Link to="/facts" className="nav-link">FACT FILES</Link>
       </div>
