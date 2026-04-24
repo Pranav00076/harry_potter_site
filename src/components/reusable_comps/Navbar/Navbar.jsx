@@ -9,7 +9,7 @@ const menuData = {
     { title: "FEATURES", image: "https://w0.peakpx.com/wallpaper/952/791/HD-wallpaper-harry-potter-harry-potter-deathly-hallows.jpg",link: "/features"},
   ],
   "QUIZZES & PUZZLES": [
-    { title: "QUIZZES", image: "https://i.pinimg.com/236x/dc/1b/31/dc1b316fe6bee2b0011f0aebbea115ad.jpg" },
+    { title: "QUIZZES", image: "https://i.pinimg.com/236x/dc/1b/31/dc1b316fe6bee2b0011f0aebbea115ad.jpg", link: "/quizzes" },
     { title: "PUZZLES", image: "https://sw6.elbenwald.de/media/7b/18/2f/1743578257/E1087630_3.jpg" },
   ],
   DISCOVER: [
