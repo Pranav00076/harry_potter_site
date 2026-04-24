@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../reusable_comps/Navbar/Navbar";
+import { Link } from "react-router-dom";
 import "./Quizzes.css";
 
 // ─── Featured Quiz ─────────────────────────────────────────────────────────────
@@ -120,7 +121,9 @@ const Quizzes = () => {
               <h3 className="qz-spotlight__card-title">{featuredQuiz.title}</h3>
               <p className="qz-spotlight__card-desc">{featuredQuiz.description}</p>
               <p className="qz-spotlight__card-author">By The Harry Potter Editorial Team</p>
-              <button className="qz-take-btn">Take Quiz</button>
+              <Link to="/SortingHat">
+                <button className="qz-take-btn">Take Quiz</button>
+              </Link>
             </div>
           </div>
 
