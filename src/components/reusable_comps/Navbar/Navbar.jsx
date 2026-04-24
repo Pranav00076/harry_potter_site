@@ -15,9 +15,9 @@ const menuData = {
   DISCOVER: [
     { title: "BOOKS", image: "https://images.unsplash.com/photo-1600189261867-30e5ffe7b8da?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFycnklMjBwb3R0ZXIlMjBib29rfGVufDB8fDB8fHww", link: "/books" },
     { title: "FILMS", image: "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg", link: "/films" },
-    { title: "PORTKEY GAMES", image: "https://cdn-hogwartslegacy.warnerbrosgames.com/community/slide-07.jpg" },
-    { title: "ON STAGE", image: "https://res.cloudinary.com/dwzhqvxaz/image/upload/v1749740938/Titles/Harry%20Potter/HPCC_2025_Prod2_1920x1080.jpg" },
-    { title: "EXPERIENCES", image: "https://media.timeout.com/images/106007502/image.jpg" },
+    // { title: "PORTKEY GAMES", image: "https://cdn-hogwartslegacy.warnerbrosgames.com/community/slide-07.jpg" },
+    // { title: "ON STAGE", image: "https://res.cloudinary.com/dwzhqvxaz/image/upload/v1749740938/Titles/Harry%20Potter/HPCC_2025_Prod2_1920x1080.jpg" },
+    // { title: "EXPERIENCES", image: "https://media.timeout.com/images/106007502/image.jpg" },
   ],
 };
 
