@@ -8,6 +8,7 @@ import Features from "./components/Features/Features.jsx"
 import FactFile from './components/FactFile/FactFile.jsx'
 import SortingHome from './components/SortingHat/SortingHome.jsx'
 import Quizzes from './components/Quizzes/Quizzes.jsx'
+import Puzzles from "./components/Puzzles/Puzzles.jsx"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.jsx'
 import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
   {
     path: "/quizzes",
     element: <Quizzes />
+  },
+  {
+    path: "/Puzzles",
+    element: <Puzzles/>
   }
 ])
 

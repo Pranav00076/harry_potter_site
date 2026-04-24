@@ -10,7 +10,7 @@ const menuData = {
   ],
   "QUIZZES & PUZZLES": [
     { title: "QUIZZES", image: "https://i.pinimg.com/236x/dc/1b/31/dc1b316fe6bee2b0011f0aebbea115ad.jpg", link: "/quizzes" },
-    { title: "PUZZLES", image: "https://sw6.elbenwald.de/media/7b/18/2f/1743578257/E1087630_3.jpg" },
+    { title: "PUZZLES", image: "https://sw6.elbenwald.de/media/7b/18/2f/1743578257/E1087630_3.jpg",link:"/Puzzles"},
   ],
   DISCOVER: [
     { title: "BOOKS", image: "https://images.unsplash.com/photo-1600189261867-30e5ffe7b8da?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFycnklMjBwb3R0ZXIlMjBib29rfGVufDB8fDB8fHww", link: "/books" },
