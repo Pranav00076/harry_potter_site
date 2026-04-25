@@ -34,10 +34,25 @@
   margin: 0 auto 20px;
 }
 
+
 .books-footer__text {
   font-family: var(--font-display);
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(201,168,76,0.4);
+}
+
+@media (max-width: 768px) {
+  .books-footer {
+    padding: 0 15px 30px;
+  }
+
+  .books-footer__line {
+    width: 100px;
+  }
+
+  .books-footer__text {
+    font-size: 0.6rem;
+  }
 }

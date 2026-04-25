@@ -40,6 +40,7 @@
     position: relative;
     height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -69,6 +70,10 @@
     padding: 0 2rem;
 }
 
+.hero-content img{
+    width: 100%;
+}
+
 .hero-content p{
     text-align: center;
    font-size: 1.2rem;
@@ -93,7 +98,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -337,18 +342,104 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .fact-file-hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .fact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-divider {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fact-file-hero {
+        height: auto;
+        padding: 40px 15px;
+        margin-top: 80px;
+    }
+
+    .fact-file-hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-divider {
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-divider span {
+        width: 40px;
+    }
+
+    .fact-file-controls {
+        margin-top: 1.5rem;
+        padding: 0 10px;
+        gap: 1.5rem;
     }
     
     .category-nav {
         flex-wrap: wrap;
         justify-content: center;
-        border-radius: 20px;
+        border-radius: 15px;
+        gap: 0.4rem;
+        padding: 8px;
+    }
+
+    .cat-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .search-wrapper input {
+        padding: 0.8rem 1rem 0.8rem 3rem;
+        font-size: 0.9rem;
+    }
+
+    .grid-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .grid-header h2 {
+        font-size: 1.5rem;
     }
     
     .fact-grid {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .fact-file-grid-container {
+        padding: 0 15px;
+    }
+
+    .card-content {
+        padding: 1.2rem;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .card-image-wrapper {
+        height: 200px;
     }
 }

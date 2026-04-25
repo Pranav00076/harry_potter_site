@@ -4,10 +4,16 @@ import Homepage from './components/homepage/Homepage.jsx'
 import Films from './components/Films/Flims'
 import BooksPage from './components/pages/BooksPage'
 import News from './components/News/News'
+import Features from "./components/Features/Features.jsx"
 import FactFile from './components/FactFile/FactFile.jsx'
+import SortingHome from './components/SortingHat/SortingHome.jsx'
+import Quizzes from './components/Quizzes/Quizzes.jsx'
+import Puzzles from "./components/Puzzles/Puzzles.jsx"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.jsx'
 import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
+import Archive from './components/Archive/Archive.jsx'
+import SplashCursor from './components/reusable_comps/SplashCursor/SplashCursor.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,13 +33,45 @@ const router = createBrowserRouter([
     element: <News />,
   },
   {
+    path: "/features",
+    element: <Features/>,
+  },
+  {
     path: "/facts",
     element: <FactFile />
+  },
+  {
+    path: "/SortingHat",
+    element: <SortingHome/>
+  },
+  {
+    path: "/quizzes",
+    element: <Quizzes />
+  },
+  {
+    path: "/Puzzles",
+    element: <Puzzles/>
+  },
+  {
+    path: "/Archive",
+    element: <Archive/>
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <SplashCursor
+  DENSITY_DISSIPATION={3.5}
+  VELOCITY_DISSIPATION={2}
+  PRESSURE={0.1}
+  CURL={3}
+  SPLAT_RADIUS={0.2}
+  SPLAT_FORCE={6000}
+  COLOR_UPDATE_SPEED={10}
+  SHADING
+  RAINBOW_MODE={false}
+  COLOR="#be9459"
+/>
     <StarField />
     <RouterProvider router={router} />
     <Footer />

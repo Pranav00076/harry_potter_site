@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import Navbar from "../reusable_comps/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
     const [activeHouse, setActiveHouse] = useState(null);
@@ -12,10 +13,10 @@ const Homepage = () => {
     };
 
     const houses = [
-        { id: 'gryffindor', name: 'Gryffindor', color: '#740001', icon: '' },
-        { id: 'ravenclaw', name: 'Ravenclaw', color: '#0e1a40', icon: '🦅' },
-        { id: 'hufflepuff', name: 'Hufflepuff', color: '#ecb939', icon: '🦡' },
-        { id: 'slytherin', name: 'Slytherin', color: '#1a472a', icon: '🐍' },
+        { id: 'gryffindor', name: 'Gryffindor', color: '#740001', icon: 'https://vectorseek.com/wp-content/uploads/2023/09/Gryffindor-Logo-Vector.svg-.png' },
+        { id: 'ravenclaw', name: 'Ravenclaw', color: '#0e1a40', icon: 'https://vectorseek.com/wp-content/uploads/2023/08/Ravenclaw-Logo-Vector.svg-.png' },
+        { id: 'hufflepuff', name: 'Hufflepuff', color: '#ecb939', icon: 'https://vectorseek.com/wp-content/uploads/2026/01/Hufflepuff-Emblem-Color.png' },
+        { id: 'slytherin', name: 'Slytherin', color: '#1a472a', icon: 'https://vectorseek.com/wp-content/uploads/2023/08/Slytherin-Logo-Vector.svg--600x713.png' },
     ];
 
     return (
@@ -72,12 +73,12 @@ const Homepage = () => {
                                 onMouseLeave={() => setActiveHouse(null)}
                                 onClick={() => playSound('magic')}
                             >
-                                <div className="shield-icon"><img src={house.icon} /></div>
+                                <div className="shield-icon"><img height="220px" width={"200px"} src={house.icon} /></div>
                                 <span>{house.name}</span>
                             </div>
                         ))}
                     </div>
-                    <button className="btn-primary">Get Sorted Now</button>
+                    <Link to="/SortingHat" className="btn-primary">Get Sorted Now</Link>
                 </div>
             </section>
 
@@ -95,7 +96,7 @@ const Homepage = () => {
                         { title: "Can you identify the potion from the description?", time: "4 min", color: "#740001" }
                     ].map((quiz, i) => (
                         <div key={i} className="quiz-card" style={{ borderColor: quiz.color }}>
-                            <div className="quiz-image-placeholder"></div>
+                            <div className={`quiz-image-placeholder${i}`}></div>
                             <div className="quiz-info">
                                 <i className="fas fa-bolt" style={{ color: quiz.color }}></i>
                                 <h3>{quiz.title}</h3>
@@ -110,7 +111,7 @@ const Homepage = () => {
             {/* News Feature: Butterbeer */}
             <section className="news-banner banner-butterbeer">
                 <div className="banner-image">
-                    <img src="https://images.ctfassets.net/usf1vwtuqyxm/3nZzLpLqY4W6oI0k2uUq6S/8d1d1d1d1d1d1d/butterbeer_season.jpg" alt="Butterbeer" />
+                    <img src="https://res.cloudinary.com/dtljonz0f/image/upload/f_auto/q_auto/v1/gc-v1/new-york/HP_Store_Butterbeer_1_usvq0p?_a=BAVAZGDY0" alt="Butterbeer" />
                 </div>
                 <div className="banner-content">
                     <h2>Bring your wizarding portrait into butterbeer season</h2>
@@ -127,7 +128,7 @@ const Homepage = () => {
                     <button className="btn-outline">Read more</button>
                 </div>
                 <div className="banner-image">
-                    <img src="https://images.ctfassets.net/usf1vwtuqyxm/4ZXZXZXZXZ/hbo_series_cast.jpg" alt="HBO Series" />
+                    <img src="https://www.slashfilm.com/img/gallery/harry-potter-hbo-tv-series-cast-guide-see-the-new-faces-of-hogwarts-beyond/l-intro-1753341053.jpg" alt="HBO Series" />
                 </div>
             </section>
 
@@ -141,18 +142,6 @@ const Homepage = () => {
                 <button className="btn-outline">Go to collection</button>
             </section>
 
-            {/* Discovery Section */}
-            <section className="discovery-section">
-                <div className="section-header">
-                    <span className="dot-line"></span>
-                    <h2>Discover the Wizarding World</h2>
-                    <span className="dot-line"></span>
-                </div>
-                <div className="discovery-grid">
-                    {/* Discover cards */}
-                </div>
-            </section>
-
             {/* Monthly Picks */}
             <section className="picks-section">
                 <div className="section-header">
@@ -161,9 +150,9 @@ const Homepage = () => {
                     <span className="dot-line"></span>
                 </div>
                 <div className="picks-grid">
-                    {['Ron Weasley', 'Butterbeer', 'Sybill Trelawney', 'Remus Lupin'].map(name => (
+                    {['Ron Weasley', 'Harry Potter', 'Sybill Trelawney', 'Remus Lupin'].map((name,i) => (
                         <div key={name} className="pick-card">
-                            <div className="pick-image"></div>
+                            <div className={`pick-image${i}`}></div>
                             <h3>{name}</h3>
                         </div>
                     ))}

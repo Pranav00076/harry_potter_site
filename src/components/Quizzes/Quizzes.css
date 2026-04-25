@@ -1,0 +1,367 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Quizzes Page — matches harrypotter.com/quiz reference design
+   Light cream body, dark atmospheric hero, clean minimal cards
+───────────────────────────────────────────────────────────────────────────── */
+
+/* ─── Page wrapper ─────────────────────────────────────────────────────────── */
+.qz-page {
+  min-height: 100vh;
+  /* background set per-section below */
+}
+
+/* ─── Hero ─────────────────────────────────────────────────────────────────── */
+.qz-hero {
+  position: relative;
+  min-height: 520px;
+  padding-top: 200px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-image: url('https://wallpapercave.com/wp/wp2756950.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #060b13;
+}
+
+.qz-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 11, 19, 0.5) 0%,
+    rgba(6, 11, 19, 0.75) 100%
+  );
+}
+
+.qz-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  padding: 60px 24px;
+}
+
+.qz-hero__title {
+  font-family: 'Cinzel', 'Cinzel Decorative', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+}
+
+.qz-hero__subtitle {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ─── Dark body wrapper ─────────────────────────────────────────────────────── */
+.qz-body {
+  background-color: var(--bg-primary, #060b13);
+  padding-bottom: 80px;
+}
+
+/* ─── Shared section title ──────────────────────────────────────────────────── */
+.qz-section-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--accent-gold, #d4af37);
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 36px;
+}
+
+/* ─── Latest & greatest section ─────────────────────────────────────────────── */
+.qz-latest {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+/* ─── Feature Spotlight ─────────────────────────────────────────────────────── */
+.qz-spotlight {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+/* Image: 65% wide, stays in flow */
+.qz-spotlight__img-wrap {
+  flex: 0 0 65%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+}
+
+.qz-spotlight__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.qz-spotlight__img-wrap:hover .qz-spotlight__img {
+  transform: scale(1.04);
+}
+
+/* Card: 45% wide, negative left margin creates the overlap — stays in flow */
+.qz-spotlight__card {
+  flex: 0 0 45%;
+  margin-left: -10%;
+  position: relative;
+  z-index: 2;
+  background: #111827;
+  color: #fff;
+  padding: 32px 28px;
+  border-radius: 2px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.qz-spotlight__tag {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d4af37;
+}
+
+.qz-spotlight__card-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  margin: 0;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.qz-spotlight__card-desc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.qz-spotlight__card-author {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
+  margin: 0;
+}
+
+.qz-take-btn {
+  align-self: flex-start;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.55);
+  padding: 8px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.qz-take-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #ffffff;
+}
+
+/* ─── Duo secondary row ─────────────────────────────────────────────────────── */
+.qz-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.qz-duo__item {
+  cursor: pointer;
+}
+
+.qz-duo__item:hover .qz-duo__title {
+  text-decoration: underline;
+}
+
+.qz-duo__img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+.qz-duo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.qz-duo__item:hover .qz-duo__img {
+  transform: scale(1.04);
+}
+
+.qz-duo__info {
+  padding: 0 2px;
+}
+
+.qz-duo__title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0 0 6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.qz-duo__author {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  color: var(--text-secondary, #a0a0a0);
+  margin: 0;
+}
+
+/* ─── Dot divider ───────────────────────────────────────────────────────────── */
+.qz-dot-divider {
+  text-align: center;
+  color: rgba(212, 175, 55, 0.5);
+  font-size: 1.2rem;
+  letter-spacing: 0.4em;
+  padding: 48px 0 40px;
+}
+
+/* ─── More to explore ───────────────────────────────────────────────────────── */
+.qz-more {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── Quiz grid ─────────────────────────────────────────────────────────────── */
+.qz-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 20px;
+}
+
+/* ─── Quiz card ─────────────────────────────────────────────────────────────── */
+.qz-card {
+  cursor: pointer;
+}
+
+.qz-card:hover .qz-card__title {
+  text-decoration: underline;
+}
+
+.qz-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.qz-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.qz-card:hover .qz-card__img {
+  transform: scale(1.04);
+}
+
+.qz-card__info {
+  padding: 0 2px;
+}
+
+.qz-card__title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0 0 6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.qz-card__author {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: var(--text-secondary, #a0a0a0);
+  margin: 0;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Spotlight stacks vertically on mobile */
+  .qz-spotlight {
+    flex-direction: column;
+  }
+
+  .qz-spotlight__img-wrap {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .qz-spotlight__card {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 0;
+  }
+
+  .qz-duo {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .qz-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+
+  .qz-hero {
+    min-height: 360px;
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qz-grid {
+    grid-template-columns: 1fr;
+  }
+}
