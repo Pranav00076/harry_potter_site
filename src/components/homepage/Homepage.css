@@ -539,17 +539,8 @@ h1, h2, h3, h4 {
     flex-direction: column;
   }
 
-  .hero-content h1 {
-    width: 100%;
-  }
-
-  .hero-content p {
-    margin-left: 0;
-    text-align: left;
-  }
-
-  .hero-content button {
-    margin-left: 0;
+  .hero-content h1,p,button{
+    display: none;
   }
 
   .house-grid {

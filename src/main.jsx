@@ -13,6 +13,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.jsx'
 import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
 import Archive from './components/Archive/Archive.jsx'
+import SplashCursor from './components/reusable_comps/SplashCursor/SplashCursor.jsx'
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,18 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <SplashCursor
+  DENSITY_DISSIPATION={3.5}
+  VELOCITY_DISSIPATION={2}
+  PRESSURE={0.1}
+  CURL={3}
+  SPLAT_RADIUS={0.2}
+  SPLAT_FORCE={6000}
+  COLOR_UPDATE_SPEED={10}
+  SHADING
+  RAINBOW_MODE={false}
+  COLOR="#be9459"
+/>
     <StarField />
     <RouterProvider router={router} />
     <Footer />

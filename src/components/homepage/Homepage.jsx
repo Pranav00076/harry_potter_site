@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import Navbar from "../reusable_comps/Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
     const [activeHouse, setActiveHouse] = useState(null);
@@ -77,7 +78,7 @@ const Homepage = () => {
                             </div>
                         ))}
                     </div>
-                    <button className="btn-primary">Get Sorted Now</button>
+                    <Link to="/SortingHat" className="btn-primary">Get Sorted Now</Link>
                 </div>
             </section>
 
