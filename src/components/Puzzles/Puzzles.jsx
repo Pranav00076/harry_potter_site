@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import './Puzzles.css';
+import { Link } from 'react-router-dom';
 
 const puzzlesData = [
   {
@@ -49,10 +50,12 @@ const puzzlesData = [
 
 const PuzzleCard = ({ puzzle }) => {
   return (
+    
     <article className="puzzle-card">
       <div className="image-wrapper">
         <span className="badge">{puzzle.type}</span>
-        <img 
+          <Link to="https://www.harrypotter.com/collections/potter-puzzles">
+          <img 
           src={puzzle.image} 
           alt={puzzle.title} 
           className="card-image" 
@@ -60,6 +63,8 @@ const PuzzleCard = ({ puzzle }) => {
             e.target.src = "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg";
           }}
         />
+          </Link>
+        
       </div>
       <div className="card-body">
         <h3 className="card-title">{puzzle.title}</h3>

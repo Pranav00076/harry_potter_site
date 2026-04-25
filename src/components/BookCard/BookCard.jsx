@@ -1,4 +1,5 @@
 import './BookCard.css';
+import { Link } from 'react-router-dom';
 
 export default function BookCard({ book }) {
   return (
@@ -31,7 +32,11 @@ export default function BookCard({ book }) {
           aria-label={`Explore ${book.title}`}
           type="button"
         >
-          <span className="book-card__btn-text">Explore</span>
+
+          <Link to="https://www.harrypotter.com/discover/books">
+            <span className="book-card__btn-text">Explore</span>
+          </Link>
+          
           <svg
             className="book-card__btn-arrow"
             width="16"
