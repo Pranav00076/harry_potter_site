@@ -6,22 +6,22 @@ import "./Quizzes.css";
 // ─── Featured Quiz ─────────────────────────────────────────────────────────────
 const featuredQuiz = {
   image:
-    "https://contentful.harrypotter.com/usf1vwtuqyxm/1f5EjNhKvbBlED0crJAzkN/10031c9cbfbe2683b68781cd3b20289d/hp1-poster.png",
-  title: "The Riddikulus-ly easy Marauders quiz",
+    "https://contentful.harrypotter.com/usf1vwtuqyxm/7EF7yVJFv9CiftkEIIo6qQ/3ecd51ee09410af0caf3354622c7294b/dark-train-photography-minerva-mcgonagall-web.png",
+  title: "The ultimate Hogwarts Professors quiz",
   description:
-    "From nicknames to Hogwarts houses, how well do you know this ragtag group of friends? Test your Marauder knowledge in our criminally easy quiz.",
+    "From Transfiguration to Defence Against the Dark Arts, how well do you know the brilliant (and sometimes dangerous) professors of Hogwarts?",
 };
 
 // ─── Secondary Row ─────────────────────────────────────────────────────────────
 const secondaryQuizzes = [
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/3/35/Harry_Potter_and_the_Chamber_of_Secrets_%28film%29.jpg",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/YvfQFf3Sc7Y1rQNcmqoKm/7278f0704d0a659047a66375127ed129/pottermore-moments-three-broomsticks-homepage-hero.jpg",
     title: "The wizarding world pub quiz",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/8/8b/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/7fP2y9bIoBRBz43NyZmMub/9f34e0be3b968eded60637866f58a4a9/lupinb.png",
     title: "Can you tell if these Remus Lupin facts are true or false?",
   },
 ];
@@ -30,48 +30,48 @@ const secondaryQuizzes = [
 const quizItems = [
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/jxbSiAfafvRThYeCQZET8/497ddde0198c18d6ecf28108ba7dc8ad/Short-Harry-Potter-Logo-Gold-white.jpg",
     title: "Can you match the magical plant to its description?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/b/b6/Harry_Potter_and_the_Goblet_of_Fire_cover.png",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/3yiKkJCfohV5EVbYsCbNv3/bfee8c7e69f1c66e3df9bb50e1a5ea3e/hp-f2-sprout-greenhouse-mandrake-app-article-hero.jpg",
     title: "Can you guess the Hufflepuff from these emojis?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/7/70/Harry_Potter_and_the_Order_of_the_Phoenix.jpg",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/5zfvnVTVPa1H2SJJT2e8V7/45080c622d247cd9044acf92e02c3760/HP-F1-philosophers-stone-hogwarts-great-lake-web-landscape.jpg",
     title: "Do you know these characters' opening lines from the first Harry Potter film?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/a/a9/Harry_Potter_and_the_Deathly_Hallows.jpg",
-    title: "Can you spot the differences between the Harry Potter books and films?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/3UhqhFHDW3if0AqCUscXoq/21430571adbe201dca249363d10b24c0/fred_george_old.png",
+    title: "Can you spot the differences between Fred and George?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/b/b5/Harry_Potter_and_the_Half-Blood_Prince_cover.jpg",
-    title: "Can you name a Harry Potter character for every letter of the alphabet?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/177FgF8r43RLqkcMzGPHQo/fe943b84e7cca54559a8b4ff4d30bf2a/WB-F3-trelawney-in-divination-web-landscape__1_.jpg",
+    title: "Can you remember Sybill Trelawney's weirdest predictions?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/3/35/Harry_Potter_and_the_Chamber_of_Secrets_%28film%29.jpg",
-    title: "Can you name the Gryffindor from their Hogwarts school report?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/7hq0yzhC3mnJWKGYy5R45s/0b7a621198e7ff6e55bd6126e0d64b6e/HP6D-08842r_GRYFFINDOR.jpg",
+    title: "Can you guess the Gryffindor from these emojis?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg",
-    title: "Can you match the magical creature to its description?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/jxbSiAfafvRThYeCQZET8/497ddde0198c18d6ecf28108ba7dc8ad/Short-Harry-Potter-Logo-Gold-white.jpg",
+    title: "Can you tell if this was Ron Weasley or Hermione Granger?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/a/a0/Harry_Potter_and_the_Prisoner_of_Azkaban.jpg",
-    title: "Which Defence Against the Dark Arts professor are you?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/3uQ06WdfBYc5S47wChuAXQ/e27d67861a8f800a55ecd3d7d124a301/hp-f5-luna-carriage-quibbler-square-HP5D-14916-_1_.jpg",
+    title: "Can you guess the Ravenclaw from these emojis?",
   },
   {
     image:
-      "https://upload.wikimedia.org/wikipedia/en/b/b6/Harry_Potter_and_the_Goblet_of_Fire_cover.png",
-    title: "Can you guess the Harry Potter character from three clues?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/5BJmfHQVf3NJYlAhwiYuS3/b7b0954a4d1258d0ca48124b9049be56/WB-HP-F6-ron-and-chocolate-cauldrons-spiked-with-love-potion.jpg",
+    title: "Can you beat our quickfire Harry Potter romance quiz?",
   },
 ];
 
