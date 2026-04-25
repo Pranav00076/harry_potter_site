@@ -79,10 +79,10 @@ const Navbar = () => {
           <i className={isSidebarOpen ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
         <div className="social-links">
-          <i className="fab fa-youtube"></i>
-          <i className="fab fa-tiktok"></i>
-          <i className="fab fa-facebook"></i>
-          <i className="fab fa-instagram"></i>
+          <a href="https://www.youtube.com/channel/UChPRO1CB_Hvd0TvKRU62iSQ" className="fab fa-youtube" ></a>
+          <a href="https://x.com/harrypotter" className="fab fa-twitter" ></a>
+          <a href="https://www.facebook.com/harrypotter/" className="fab fa-facebook" ></a>
+          <a href="https://www.instagram.com/pt.clicks/" className="fab fa-instagram" ></a>
         </div>
         <div className="logo">
           <Link to="/">

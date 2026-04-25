@@ -47,6 +47,16 @@ body {
 }
 
 /* Typography */
+
+a{
+  text-decoration: none;
+  color: rgb(190, 190, 152);
+}
+
+a:active{
+  color: rgb(255, 255, 255);
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   text-transform: uppercase;
