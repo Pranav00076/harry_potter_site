@@ -128,7 +128,7 @@ const Homepage = () => {
                     <button className="btn-outline">Read more</button>
                 </div>
                 <div className="banner-image">
-                    <img src="https://www.slashfilm.com/img/gallery/harry-potter-hbo-tv-series-cast-guide-see-the-new-faces-of-hogwarts-beyond/l-intro-1753341053.jpg" alt="HBO Series" />
+                    <img src="https://imgs.search.brave.com/l8BYPyWxlWoRc8IQS15i_o-StDZi4YhUZ6fhvwYu_0A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZW9w/bGUuY29tL3RobWIv/RWZIV09IREFmZEd4/aVdLOElLbVRpdGJk/VlBNPS8xNTAweDAv/ZmlsdGVyczpub191/cHNjYWxlKCk6bWF4/X2J5dGVzKDE1MDAw/MCk6c3RyaXBfaWNj/KCk6Zm9jYWwoNzQ5/eDA6NzUxeDIpL2hh/cnJ5LXBvdHRlci1z/ZXJpZXMtMDMyNDI2/LWRkYTk1NGE1NzE5/NTQyMDFiNzZkNTk0/MmQ2MDU2NDUwLmpw/Zw" alt="HBO Series" />
                 </div>
             </section>
 
