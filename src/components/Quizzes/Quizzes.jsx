@@ -30,8 +30,8 @@ const secondaryQuizzes = [
 const quizItems = [
   {
     image:
-      "https://contentful.harrypotter.com/usf1vwtuqyxm/jxbSiAfafvRThYeCQZET8/497ddde0198c18d6ecf28108ba7dc8ad/Short-Harry-Potter-Logo-Gold-white.jpg",
-    title: "Can you match the magical plant to its description?",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/453RU8jagilaTcIJOWUzLW/767316cfb03c87c560b165552c75d4fe/mary-grandpre-chamber-of-secrets-pixies-dada-lesson-web.png",
+    title: "Can you pass your O.W.L. in Defence Against the Dark Arts?",
   },
   {
     image:
@@ -60,7 +60,7 @@ const quizItems = [
   },
   {
     image:
-      "https://contentful.harrypotter.com/usf1vwtuqyxm/jxbSiAfafvRThYeCQZET8/497ddde0198c18d6ecf28108ba7dc8ad/Short-Harry-Potter-Logo-Gold-white.jpg",
+      "https://contentful.harrypotter.com/usf1vwtuqyxm/1ciQISb1SPcgnY0Q6FwTwj/1c5d1b491460ef5364a4f23303844388/harry-ron-hermione-web-header.jpg",
     title: "Can you tell if this was Ron Weasley or Hermione Granger?",
   },
   {
