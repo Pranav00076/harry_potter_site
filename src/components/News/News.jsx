@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import "./News.css";
+import { Link } from "react-router-dom";
 
 // ─── News Grid Data ────────────────────────────────────────────────────────────
 const newsItems = [
@@ -101,7 +102,11 @@ const News = () => {
             <p className="news-spotlight__author">
               By The Harry Potter Editorial Team
             </p>
-            <button className="news-btn-outline">Read Feature</button>
+
+            <Link to="https://www.harrypotter.com/news">
+              <button className="news-btn-outline">Read Feature</button>
+            </Link>
+
           </div>
         </div>
       </section>

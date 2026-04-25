@@ -121,7 +121,7 @@ const Quizzes = () => {
               <h3 className="qz-spotlight__card-title">{featuredQuiz.title}</h3>
               <p className="qz-spotlight__card-desc">{featuredQuiz.description}</p>
               <p className="qz-spotlight__card-author">By The Harry Potter Editorial Team</p>
-              <Link to="/SortingHat">
+              <Link to="https://www.harrypotter.com/quiz">
                 <button className="qz-take-btn">Take Quiz</button>
               </Link>
             </div>

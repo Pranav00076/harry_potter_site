@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import "./Features.css";
+import { Link } from "react-router-dom";
 
 const featuresItems = [
   {
@@ -92,7 +93,7 @@ const Features = () => {
             <p className="features-spotlight__author">
               By The Harry Potter Editorial Team
             </p>
-            <button className="features-btn-outline">Read Feature</button>
+            <Link to="https://www.harrypotter.com/news" className="features-btn-outline">Read Feature</Link>
           </div>
         </div>
       </section>

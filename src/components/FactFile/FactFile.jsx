@@ -3,6 +3,7 @@ import "./FactFile.css";
 import Navbar from "../reusable_comps/Navbar/Navbar";
 import StarField from "../reusable_comps/Navbar/Starfield/Starfield";
 import fact from "./fact-files-header.svg"
+import { Link } from "react-router-dom";
 
 const FACT_DATA = [
   {
@@ -172,7 +173,10 @@ const FactFile = () => {
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                   <button className="read-more-btn">
+                    <Link to="https://www.harrypotter.com/fact-file">
                     <span>READ MORE</span>
+                    </Link>
+                    
                     <i className="fas fa-chevron-right"></i>
                   </button>
                 </div>
