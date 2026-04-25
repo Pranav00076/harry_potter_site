@@ -61,7 +61,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SplashCursor
-  DENSITY_DISSIPATION={3.5}
+  DENSITY_DISSIPATION={8}
   VELOCITY_DISSIPATION={2}
   PRESSURE={0.1}
   CURL={3}
