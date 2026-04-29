@@ -14,6 +14,7 @@ import StarField from './components/reusable_comps/Navbar/Starfield/Starfield.js
 import Footer from './components/reusable_comps/Navbar/Footer/Footer.jsx'
 import Archive from './components/Archive/Archive.jsx'
 import SplashCursor from './components/reusable_comps/SplashCursor/SplashCursor.jsx'
+import MusicPlayer from './components/reusable_comps/MusicPlayer/MusicPlayer.jsx'
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,7 @@ createRoot(document.getElementById('root')).render(
   COLOR="#be9459"
 />
     <StarField />
+    <MusicPlayer />
     <RouterProvider router={router} />
     <Footer />
   </StrictMode>,
