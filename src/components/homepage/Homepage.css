@@ -694,8 +694,7 @@ section.news-banner.reverse {
   }
 
   .poll-options {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: none;
   }
 
   .house-grid {
